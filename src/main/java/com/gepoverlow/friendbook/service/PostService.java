@@ -1,7 +1,7 @@
 package com.gepoverlow.friendbook.service;
 
 import com.gepoverlow.friendbook.model.Post;
-import com.gepoverlow.friendbook.postRepository.PostRepository;
+import com.gepoverlow.friendbook.repository.PostRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
