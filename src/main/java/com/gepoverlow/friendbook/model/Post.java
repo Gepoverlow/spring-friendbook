@@ -20,12 +20,12 @@ public class Post {
     @Column(name = "post_author", nullable = false, columnDefinition = "TEXT")
     private String postAuthor;
     @Column(name = "creation_date", nullable = false, columnDefinition = "TEXT")
-    private Date creationDate;
+    private String creationDate;
 
     @PrePersist
     protected void onCreate() {
 
-        creationDate = new Date();
+        creationDate = new Date().toString();
 
     }
 
@@ -45,11 +45,11 @@ public class Post {
         this.postContent = postContent;
     }
 
-    public Date getCreationDate() {
+    public String getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    public void setCreationDate(String creationDate) {
         this.creationDate = creationDate;
     }
 

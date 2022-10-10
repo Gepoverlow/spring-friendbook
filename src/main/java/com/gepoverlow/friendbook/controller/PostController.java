@@ -31,6 +31,7 @@ public class PostController {
 
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping
     public Post createPost(@NotNull @RequestBody Post post){
 
@@ -44,7 +45,7 @@ public class PostController {
         return postService.updatePostById(id, newContent);
 
     }
-
+    
     @DeleteMapping(path = "/{id}")
     public void deletePost(@PathVariable Long id){
 
