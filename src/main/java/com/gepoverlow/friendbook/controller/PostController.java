@@ -15,8 +15,6 @@ public class PostController {
 
     @Autowired
     private PostService postService;
-
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping
     public List<Post> getAllPosts(){
 
@@ -31,7 +29,7 @@ public class PostController {
 
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @PostMapping
     public Post createPost(@NotNull @RequestBody Post post){
 
